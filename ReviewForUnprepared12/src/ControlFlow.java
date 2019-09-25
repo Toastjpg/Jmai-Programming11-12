@@ -1,12 +1,12 @@
-import java.sql.SQLOutput;
 import java.util.Scanner;
 
 public class ControlFlow {
     private boolean stayInControl = true;
     private int userChoice;
     Scanner scanner = new Scanner(System.in);
-    //Messages
+    //Intro message
     private final String GREETMESSAGE = "Control Flow Options:\n1. If/Else If/Else Statements\n2. While Loop/For Loops\n3. Switch Statements\n0. Exit to Main Menu";
+    //Info and examples
     private final String IFSTATEMENTS = "If statements are used in java to let the system make decisions.  It creates branching programs.  If statements are based on booleans.  If the condition is true then the block of code will execute.  If the statement is false the block of code will be skipped over and the program continues to run.";
     private final String IFSTATEMENTSEXAMPLE = "Example:\nif(condition){\n\tblock of code\n}";
     private final String FORLOOPS = "FORLOOPSTATEMENTS";
@@ -40,12 +40,10 @@ public class ControlFlow {
             }
         }
     }
-
     private void printIfMessages(){
         System.out.println(IFSTATEMENTS);
         System.out.println(IFSTATEMENTSEXAMPLE);
     }
-
     private void printLoopMessages(){
         System.out.println(FORLOOPS);
         System.out.println(FORLOOPSEXAMPLE);
@@ -56,6 +54,4 @@ public class ControlFlow {
         System.out.println(SWITCHSTATEMENT);
         System.out.println(SWITCHSTATEMENTEXAMPLE);
     }
-
-
 }
