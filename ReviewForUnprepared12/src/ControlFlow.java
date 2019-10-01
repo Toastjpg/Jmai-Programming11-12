@@ -16,9 +16,9 @@ public class ControlFlow {
     private final String WHILELOOPS = "While Loops are a used to continuously execute statements as long as initial condition are still true. The block of code within the loop will continue to run until the condition is false and the loop breaks.";
     private final String WHILELOOPSEXAMPLE = "Example:\nwhile(condition){\n\tstatement(s)\n}\n";
     private final String FORLOOPS = "For Loops are another form of loops. They are similar to While Loops but have three conditions. The first condition initializes the variable, the second condition sets the amount of iterations by limiting the variable value, and the third condition changes the increments at which the variable changes at. For Loops are useful because they have as set amount of iterations whereas While Loops can run forever.";
-    private final String FORLOOPSEXAMPLE = "Example:\nfor(int i = 0; i <= 10; i++){\nstatement(s)\n}\nThe statements will run until int i = 10 with each iteration increasing i by 1\n";
-    private final String SWITCHSTATEMENT = "";
-    private final String SWITCHSTATEMENTEXAMPLE = "SWITCH EXAMPLE";
+    private final String FORLOOPSEXAMPLE = "Example:\nfor(int i = 0; i <= 10; i++){\nstatement(s)\n}\n\\\\The statements will run until int i = 10 with each iteration increasing i by 1\n";
+    private final String SWITCHSTATEMENT = "Switch Statements are similar to If and Else statements and can achieve the same goal. One of the main differences is that Switch Statements can immediately evaluate to the correct case without having check each condition in sequential order like If and Else statements. Switch Statements can use primitive data types as conditions compared to If and Else Statements that can use complex evaluations as conditions.";
+    private final String SWITCHSTATEMENTEXAMPLE = "Example:\nint num = 3;\nString numString;\nswitch(num){\n\tcase 1: numString = 1;\n\t\tbreak;\n\tcase 2: numString = 2;\n\t\tbreak;\n\tcase 3: numString = 3;\n\t\tbreak;\n}\nSystem.out.println(numString);\n\\\\This Switch Statement will print out what ever int num is equal to. The break; statements after each case are required to prevent each statement in the case from falling into the next. Otherwise the statements will run in sequential order after a case is met.\n";
 
     public ControlFlow() {
         controlFlowStart();
@@ -57,7 +57,6 @@ public class ControlFlow {
         System.out.println(WHILELOOPSEXAMPLE);
         System.out.println(FORLOOPS);
         System.out.println(FORLOOPSEXAMPLE);
-
     }
     private void printSwitchMessages(){
         System.out.println(SWITCHSTATEMENT);

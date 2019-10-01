@@ -17,20 +17,47 @@ public class Objects {
 
     private void objectsStart(){
         while (stayInObjects){
-            System.out.println("Hello");
+            System.out.println(GREETMESSAGE);
             userChoice = scanner.nextInt();
             switch (userChoice){
                 case 0:
                     stayInObjects = false;
                     break;
                 case 1:
+                    printClassMessages();
                     break;
                 case 2:
+                    printConstructorMessages();
                     break;
                 case 3:
+                    printSetterGetterMessages();
                     break;
-
+                case 4:
+                    printStringMethodMessages();
+                    break;
+                case 5:
+                    printAccessDataMessages();
+                    break;
             }
         }
+    }
+    private void printClassMessages(){
+        System.out.println(CLASS);
+        System.out.println(CLASSEXAMPLE);
+    }
+    private void printConstructorMessages(){
+        System.out.println(CONSTRUCTOR);
+        System.out.println(CONSTRUCTOREXAMPLE);
+    }
+    private void printSetterGetterMessages(){
+        System.out.println(SETTERSGETTERS);
+        System.out.println(SETTERSGETTERSEXAMPLE);
+    }
+    private void printStringMethodMessages(){
+        System.out.println(TOSTRINGMETHOD);
+        System.out.println(TOSTRINGMETHODEXAMPLE);
+    }
+    private void printAccessDataMessages(){
+        System.out.println(ACCESSDATA);
     }
 }
