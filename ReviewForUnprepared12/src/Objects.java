@@ -12,8 +12,8 @@ public class Objects {
     private final String CONSTRUCTOREXAMPLE = "Example:\npublic class Car{\n\n\tpublic Car(int carType, int carSpeed){\n\t\ttype = carType;\n\t\tspeed = carSpeed;\n\t}\n\tcar myCar = new Car(1,10);\n}";
     private final String SETTERSGETTERS = "Setters and Getters are ways in Java to access and change the value in a variable. Private variables in a class cannot be accessed outside of the class that it's in, therefore setters and getters need to be used instead of changing the variable to be public. The example shown is a class with a private int and some getter/setter methods.";
     private final String SETTERSGETTERSEXAMPLE = "Example:\npublic class Main{\n\tprivate int number;\n\tpublic int getNumber()[\n\t\treturn this.number;\n\t}\n\tpublic int setNumber(int num){\n\t\tthis.num = number;\n\t}\n";
-    private final String TOSTRINGMETHOD = " ";
-    private final String TOSTRINGMETHODEXAMPLE = "";
+    private final String TOSTRINGMETHOD = "The toString method returns the string representation of an object. Whenever we print an object, the toString method will be called automatically and print out classname@HashCode_In_Hexadecimal_form. We can override this by defining the toString method in the class to print out the desired values.";
+    private final String TOSTRINGMETHODEXAMPLE = "Example:\npublic class Person{\n\tint age;\n\tString name;\n\tPerson(int age, String name){\n\t\tthis.idNum = num;\n\t\tthis.name = name;\n\t}\n\n\tpublic String toString(){\n\t\treturn num + \"\" + name;\n\t}\n\n\tpublic static main void (String args[]){\n\t\tPerson p1 = new Person(23,\"Jim\");\n\t\tPerson p2 = new Person(28,\"Dan\");\n\n\t\tSystem.out.println(p1);\n\t\tSystem.out.println(p2);\n\t}\n}\n\\\\The toString method in this class overrides the default java toString method and prints out the person's age and name.\n";
     private final String ACCESSDATA = "";
 
     public Objects(){
