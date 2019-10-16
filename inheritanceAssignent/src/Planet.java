@@ -34,13 +34,12 @@ public class Planet {
         return moon;
     }
 
-    @Override
-    public boolean equals(Object obj) {
-        return super.equals(obj);
+    public boolean equals(Planet obj) {
+        return this.designation.equals(obj.designation);
     }
 
     @Override
     public String toString() {
-        return super.toString();
+        return "Orbit Time: " + orbitTime + "Moons: " + getMoons() + "Designation" + designation;
     }
 }

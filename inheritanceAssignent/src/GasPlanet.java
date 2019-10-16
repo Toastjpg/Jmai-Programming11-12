@@ -28,7 +28,7 @@ public class GasPlanet extends Planet {
 
     @Override
     public String toString() {
-        return super.toString();
+        return "Orbit Time: " + getOrbitTime() + "Moons: " + getMoons() + "Designation" + getDesignation() + "Has Rings?: " + hasRings + "Color: " + color;
     }
 
 }
