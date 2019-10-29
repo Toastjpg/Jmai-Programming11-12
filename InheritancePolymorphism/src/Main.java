@@ -1,24 +1,25 @@
-class A{
-    public A(int i){
-        System.out.println(1);
+class ABC{
+    void methodABC(){
+        System.out.println(111);
     }
-
-    public A(){
-        this(10);
-        System.out.println(2);
-    }
-    void A(){
-        A(10);
-        System.out.println(3);
-    }
-
-    void A(int i){
-
+    void methodABC(int i){
+        System.out.println(222);
     }
 }
-
+class XYZ extends ABC{
+    @Override
+    void methodABC(int i){
+        System.out.println(333);
+    }
+    @Override
+    void methodABC(){
+        System.out.println(444);
+    }
+}
 public class Main{
     public static void main(String[] args) {
-        new A().A();
+        ABC abc = new XYZ();
+        abc.methodABC(10);
+        abc.methodABC();
     }
 }
