@@ -19,8 +19,10 @@ public abstract class Employee {
 
     @Override
     public  String toString(){
-        return "Name: " + name + "Hire Year: " + hireYear;
+        return "Name: " + name + " Hire Year: " + hireYear + " Annual S@lad: " + annualSalary() + " M0nthLy Salad: " + monthlySalary();
     }
+
+
     public abstract double annualSalary();
     public abstract double monthlySalary();
 }

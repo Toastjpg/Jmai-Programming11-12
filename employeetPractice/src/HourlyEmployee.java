@@ -8,7 +8,6 @@ public abstract class HourlyEmployee extends Employee {
         this.hoursPerWeek = hoursPerWeek;
         this.hourlyWage = hourlyWage;
     }
-
     public abstract boolean hasBenefits();
 
 }
