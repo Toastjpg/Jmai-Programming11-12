@@ -1,8 +1,8 @@
 package Tools.Time;
 
-public class secon implements Theticker{
+public class Second implements Theticker{
     int z;
-    public secon(){
+    public Second(){
         z = 0;
     }
 
@@ -14,7 +14,7 @@ public class secon implements Theticker{
         this.z = z;
     }
 
-    public secon(int z) {
+    public Second(int z) {
         this.z = z;
     }
     public String toString(){

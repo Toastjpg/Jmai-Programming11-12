@@ -10,7 +10,11 @@ public class pasta extends items{
 
     @Override
     public double getHowMuch() {
-        //if delux add 2 bucks
-        return 0;
+        if (isDelux){
+            return getPrice() + 2;
+        }
+        else{
+            return getPrice();
+        }
     }
 }

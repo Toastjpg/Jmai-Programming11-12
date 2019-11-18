@@ -1,7 +1,7 @@
 import Tools.Time.Hour;
 import Tools.Time.Minute;
 import Tools.Time.Time;
-import Tools.Time.secon;
+import Tools.Time.Second;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -11,13 +11,13 @@ public class TimeTests {
     Time time;
     Hour hr;
     Minute min;
-    secon sec;
+    Second sec;
 
     @Before
     public void setup(){
         time = new Time();
         hr = new Hour(10);
-        sec = new secon(59);
+        sec = new Second(59);
         min = new Minute(59);
 
     }

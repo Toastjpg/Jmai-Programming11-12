@@ -19,4 +19,8 @@ public abstract class items{
 
     public abstract double getHowMuch();
 
+    public double getPrice(){
+        return howMuch;
+    }
+
 }
