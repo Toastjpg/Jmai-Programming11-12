@@ -1,9 +1,9 @@
 package Tools;
 
 import Model.items;
-import Model.pasta;
-import Model.pizza;
-import Model.sandwich;
+import Model.Pasta;
+import Model.Pizza;
+import Model.Sandwich;
 
 import java.util.ArrayList;
 
@@ -22,17 +22,17 @@ public class Kitchen {
         for(int i = 0 ; i< 5;i++){
             makePizza();
             makePasta();
-            makesand();
+            makeSandwich();
         }
     }
 
     private void makePizza() {
-        inventory.add(new pizza());
+        inventory.add(new Pizza("Pizza", 10.0, false));
     }
     private void makePasta(){
-        inventory.add(new pasta());
+        inventory.add(new Pasta("Pasta", 15.0, false));
     }
-    private void makesand(){
-        inventory.add(new sandwich());
+    private void makeSandwich(){
+        inventory.add(new Sandwich("Sandwich", Sandwich.Size.SMALL));
     }
 }

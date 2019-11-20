@@ -1,13 +1,13 @@
 package Model;
 
-public class pasta extends items{
+public class Pasta extends items{
     boolean isDelux;
 
-    pasta(String name, double price, boolean delux){
+    public Pasta(String name, double price, boolean delux){
         super(name, price);
         isDelux = delux;
     }
-
+//Adds $2 to price if it is delux
     @Override
     public double getHowMuch() {
         if (isDelux){

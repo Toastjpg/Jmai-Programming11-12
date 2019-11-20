@@ -6,6 +6,7 @@ import Tools.Time.Time;
 import java.util.ArrayList;
 
 public class Order {
+    ArrayList<items> customerOrder;
     Time start;
     Time end;
     boolean out;
@@ -13,7 +14,6 @@ public class Order {
 
     Order(ArrayList<items> items, Time start){
         //if not in inventory add 10 minutes to order
-        ArrayList<items> customerOrder = new ArrayList<>();
         this.start = start;
         end = new Time(start);
         for(int i = 0; i < 20;i++){

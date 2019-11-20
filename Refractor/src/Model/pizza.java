@@ -1,12 +1,13 @@
 package Model;
 
-public class pizza extends items {
+public class Pizza extends items {
     boolean isDelux;
 
-    public pizza(String name, double howMuch) {
+    public Pizza(String name, double howMuch, boolean delux) {
         super(name, howMuch);
+        isDelux = delux;
     }
-
+//Adds $3 to price if it is delux
     @Override
     public double getHowMuch() {
         if (isDelux){
