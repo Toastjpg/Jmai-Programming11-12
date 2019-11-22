@@ -1,6 +1,6 @@
 package Tools;
 
-import Model.items;
+import Model.Items;
 import Model.Pasta;
 import Model.Pizza;
 import Model.Sandwich;
@@ -11,14 +11,14 @@ public class Kitchen {
     private String name;
     private ArrayList<Customer> customer = new ArrayList<>();
     private ArrayList<Order> order = new ArrayList<>();
-    private ArrayList<items> inventory = new ArrayList<>();
+    private ArrayList<Items> inventory = new ArrayList<>();
 
     public Kitchen(String name){
         this.name = name;
-        startStuff();
+        startCooking();
     }
 
-    public void startStuff(){
+    public void startCooking(){
         for(int i = 0 ; i< 5;i++){
             makePizza();
             makePasta();
@@ -34,5 +34,9 @@ public class Kitchen {
     }
     private void makeSandwich(){
         inventory.add(new Sandwich("Sandwich", Sandwich.Size.SMALL));
+    }
+
+    public ArrayList<Items> getInventory(){
+        return inventory;
     }
 }

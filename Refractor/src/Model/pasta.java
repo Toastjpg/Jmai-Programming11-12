@@ -1,6 +1,6 @@
 package Model;
 
-public class Pasta extends items{
+public class Pasta extends Items {
     boolean isDelux;
 
     public Pasta(String name, double price, boolean delux){

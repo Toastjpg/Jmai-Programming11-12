@@ -1,10 +1,10 @@
 package Model;
 
-public abstract class items{
+public abstract class Items {
     private String name;
     private double howMuch;
 
-    public items(String name, double howMuch) {
+    public Items(String name, double howMuch) {
         this.name = name;
         this.howMuch = howMuch;
     }
