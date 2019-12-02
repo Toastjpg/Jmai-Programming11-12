@@ -9,8 +9,6 @@ import java.util.ArrayList;
 
 public class Kitchen {
     private String name;
-    private ArrayList<Customer> customer = new ArrayList<>();
-    private ArrayList<Order> order = new ArrayList<>();
     private ArrayList<Items> inventory = new ArrayList<>();
 
     public Kitchen(String name){

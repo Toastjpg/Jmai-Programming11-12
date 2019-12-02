@@ -46,22 +46,22 @@ public class Time implements Theticker{
     }
 
     public void tick(){
-        if(sec.getZ() == 59){
-            if(min.getY() == 59){
-                if(hr.getX() == 23){
-                    hr.setX(0);
-                    min.setY(0);
-                    sec.setZ(0);
+        if(sec.getSecond() == 59){
+            if(min.getMinute() == 59){
+                if(hr.getHour() == 23){
+                    hr.setSecond(0);
+                    min.setMinute(0);
+                    sec.setSecond(0);
                 }
                 else{
                     hr.tick();
-                    min.setY(0);
-                    sec.setZ(0);
+                    min.setMinute(0);
+                    sec.setSecond(0);
                 }
             }
             else{
                 min.tick();
-                sec.setZ(0);
+                sec.setSecond(0);
             }
         }
         else{

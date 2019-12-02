@@ -6,11 +6,11 @@ public class Second implements Theticker{
         z = 0;
     }
 
-    public int getZ() {
+    public int getSecond() {
         return z;
     }
 
-    public void setZ(int z) {
+    public void setSecond(int z) {
         this.z = z;
     }
 
