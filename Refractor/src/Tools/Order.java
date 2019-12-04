@@ -13,8 +13,17 @@ public class Order {
     boolean deliveryInProgress;
     boolean delivered;
 
-    Order (ArrayList<Items> customerOrder, Time start, Kitchen kitchen, Customer customer){
+    //Requires: ArrayList, Time, Kitchen, Customer
+    //Modifies: this
+    /*Effects:
+    adds items from items ArrayList to customerOrder ArrayList
+    starts the time
+    adds 20 seconds to time
+    if the item in the customerOrder is not in the inventory, 10 minutes is added to time
+    */
+    public Order(ArrayList<Items> items, Time start, Kitchen kitchen, Customer customer){
         this.customer = customer;
+        customerOrder = items;
         this.start = start;
         end = new Time(start);
         for(int t = 0; t < 20;t++){
@@ -36,6 +45,9 @@ public class Order {
         return deliveryInProgress;
     }
 
+    //Requires:
+    //Modifies:
+    //Effects: sets the delivered boolean to true
     public void isDelivered(){
         delivered = true;
     }
@@ -44,6 +56,17 @@ public class Order {
         return customer;
     }
 
+    public ArrayList<Items> getCustomerOrder() {
+        return customerOrder;
+    }
+
+    public Time getEndTime(){
+        return end;
+    }
+
+    //Requires:
+    //Modifies:
+    //Effects: adds the price of each item in the customerOrder ArrayList to a total
     public double getTotalPrice(){
         double total = 0;
         for (Items i : customerOrder){
@@ -51,13 +74,4 @@ public class Order {
         }
         return total;
     }
-
-    public Time getEndTime(){
-        return end;
-    }
-
-    public String toString(){
-        return customerOrder.toString() + "Start Time: " + start + "End Time: " + end + "Total Price: $" + getTotalPrice();
-    }
-
 }
