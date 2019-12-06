@@ -17,7 +17,7 @@ public class Main {
         Time time = new Time();
 
         //Creates the kitchen and creates inventory items
-        Kitchen kitchen = new Kitchen("E-tea");
+        Kitchen kitchen = new Kitchen("Restaurant");
         kitchen.startCooking();
 
         //Adds items to the customer's order

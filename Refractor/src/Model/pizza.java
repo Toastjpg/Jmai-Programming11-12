@@ -17,4 +17,8 @@ public class Pizza extends Items {
             return getPrice();
         }
     }
+
+    public String toString() {
+        return "Name: " + super.getName() + " Price: " +  getPrice();
+    }
 }

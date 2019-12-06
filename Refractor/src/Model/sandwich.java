@@ -24,4 +24,8 @@ public class Sandwich extends Items {
     public double getHowMuch() {
         return getPrice();
     }
+
+    public String toString() {
+        return "Name: " + super.getName() + " Price: " +  getPrice();
+    }
 }

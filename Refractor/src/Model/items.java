@@ -22,5 +22,4 @@ public abstract class Items {
     public double getPrice(){
         return howMuch;
     }
-
 }

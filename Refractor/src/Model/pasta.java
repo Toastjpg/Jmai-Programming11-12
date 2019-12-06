@@ -17,4 +17,9 @@ public class Pasta extends Items {
             return getPrice();
         }
     }
+
+    @Override
+    public String toString() {
+        return "Name: " + super.getName() + " Price: " +  getPrice();
+    }
 }
