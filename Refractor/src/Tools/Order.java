@@ -6,7 +6,7 @@ import Tools.Time.Time;
 import java.util.ArrayList;
 
 public class Order {
-    private ArrayList<Items> customerOrder = new ArrayList<>();
+    private ArrayList<Items> customerOrder;
     private Customer customer;
     private Time start;
     private Time end;
