@@ -1,4 +1,9 @@
 public class Main {
+    /** Finds the day of the year when given a date.
+    * @param month integer between 1 and 12
+    * @param dayOfMonth positive integer that is less than 28, 30, or 31
+    * @param year positive integer
+    * @return dayOfYear*/
     public static String dayOfYear(int month, int dayOfMonth, int year) {
         int dayOfYear = 0;
         int[] totalDayInMonth = {31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
