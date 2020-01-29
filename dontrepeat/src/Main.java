@@ -19,6 +19,6 @@ public class Main {
         return String.valueOf(dayOfYear);
     }
     public static void main(String[] args) {
-        System.out.println(dayOfYear(1, 29,2062));
+        System.out.println(dayOfYear(1, 29, 2062));
     }
 }
