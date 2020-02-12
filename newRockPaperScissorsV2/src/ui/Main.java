@@ -1,7 +1,10 @@
 package ui;
 
-import game.RockPaperScissorsGame;
+import game.RockPaperScissors;
 
 public class Main {
-    RockPaperScissorsGame game = new RockPaperScissorsGame();
+    public static void main(String[] args) {
+        RockPaperScissors game = new RockPaperScissors();
+        System.out.println(game.start());
+    }
 }
