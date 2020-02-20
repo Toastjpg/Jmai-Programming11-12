@@ -6,6 +6,8 @@ import java.util.Scanner;
 public class RockPaperScissors {
     private String computerInput;
     private String userInput;
+    private int userScore;
+    private String errorMessage;
     private int randomComputerNumber = new Random().nextInt(3);
     private static final String ROCK = "rock";
     private static final String PAPER = "paper";
@@ -71,27 +73,54 @@ public class RockPaperScissors {
                 return Integer.toString(0);
             }
             else if (userInput.equals(ROCK) && computerInput.equals(PAPER)){
+                userScore--;
                 return Integer.toString(-1);
             }
             else if (userInput.equals(ROCK) && computerInput.equals(SCISSORS)){
+                userScore++;
                 return Integer.toString(1);
             }
             else if (userInput.equals(PAPER) && computerInput.equals(SCISSORS)){
+                userScore--;
                 return Integer.toString(-1);
             }
             else if (userInput.equals(PAPER) && computerInput.equals(ROCK)){
+                userScore++;
                 return Integer.toString(1);
             }
             else if (userInput.equals(SCISSORS) && computerInput.equals(ROCK)){
+                userScore--;
                 return Integer.toString(-1);
             }
             else if (userInput.equals(SCISSORS) && computerInput.equals(PAPER)){
+                userScore++;
                 return Integer.toString(1);
             }
         }
-        return INVALID_INPUT;
+        return errorMessage = INVALID_INPUT;
     }
+
+    /**
+     * Gets the generated computer choice
+     * @return rock, paper, or scissors depending on randomly generated number
+     */
     public String getComputerInput() {
         return computerInput;
+    }
+
+    /**
+     * Gets the user score
+     * @return 0 if the user ties, 1 if the user won, -1, if the user lost
+     */
+    public int getUserScore(){
+        return userScore;
+    }
+
+    /**
+     * Gets the error message
+     * @return INVALID_INPUT if the user inputs a string that is not ROCK, PAPER, or SCISSORS
+     */
+    public String getErrorMessage(){
+        return errorMessage;
     }
 }
