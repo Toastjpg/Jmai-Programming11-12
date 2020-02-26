@@ -11,4 +11,8 @@ public enum Suits {
         this.suit = suit;
         this.color = color;
     }
+
+    public String getColor() {
+        return color;
+    }
 }
