@@ -13,6 +13,11 @@ public class NumberCard extends Card {
     }
 
     @Override
+    public int getNumberValue() {
+        return value;
+    }
+
+    @Override
     public String getValue() {
         if (value == 1){
             return ACE;
@@ -30,5 +35,16 @@ public class NumberCard extends Card {
     @Override
     public String toString(){
         return "NumberCard: " + getValue() + " Suit: " + getSuit() + " Color: " + getColor() ;
+    }
+
+    @Override
+    public int compareTo(Card c) {
+        if (getNumberValue() > c.getNumberValue()){
+            return -1;
+        }
+        else if (getNumberValue() < c.getNumberValue()){
+            return 1;
+        }
+        return 0;
     }
 }

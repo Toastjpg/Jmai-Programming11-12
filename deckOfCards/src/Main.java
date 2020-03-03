@@ -1,3 +1,5 @@
+import java.util.Collections;
+import java.util.Iterator;
 import java.util.LinkedList;
 
 public class Main {
@@ -17,9 +19,23 @@ public class Main {
             deck.add(new FaceCard(i, Suits.CLOVERS));
             deck.add(new FaceCard(i, Suits.DIAMONDS));
         }
-
         for (Card i : deck){
             System.out.println(i.toString());
+        }
+
+        System.out.println("SORTED BY KING HIGH ---------------");
+        Collections.sort(deck);
+        Iterator<Card> iterator = deck.listIterator();
+        while (iterator.hasNext()){
+            System.out.println(iterator.next());
+        }
+
+        System.out.println("SORTED BY SUITS ---------------");
+        CardComparator cardComparator = new CardComparator();
+        Collections.sort(deck, cardComparator);
+        Iterator<Card> iterator1 = deck.iterator();
+        while (iterator1.hasNext()){
+            System.out.println(iterator1.next());
         }
     }
 }
