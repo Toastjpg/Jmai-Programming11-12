@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Arrays;
 
 public class Main {
 
@@ -17,9 +18,11 @@ public class Main {
 
     static int problemTwo(String s){
         int answer = 0;
-        ArrayList characters = new ArrayList();
-        if (s.contains("bob")){
-            answer++;
+        ArrayList<String> characters = new ArrayList<>(Arrays.asList(s.split("")));
+        for (int i = 0; i < s.length() - 2; i++){
+            if (characters.get(i).equals("b") && characters.get(i + 1).equals("o") && characters.get(i + 2).equals("b")){
+                answer++;
+            }
         }
         return answer;
     }
