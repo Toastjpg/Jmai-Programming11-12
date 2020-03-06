@@ -7,13 +7,13 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) throws FileNotFoundException {
         Scanner fileScanner = new Scanner(new File("illiad.txt"));
-        HashSet<Words> set = new HashSet<>();
+        HashSet<Words> wordsHashSet = new HashSet<>();
 
         while (fileScanner.hasNext()) {
-            set.add(new Words(fileScanner.next()));
+            wordsHashSet.add(new Words(fileScanner.next()));
         }
 
-        Iterator<Words> wordsIterator = set.iterator();
+        Iterator<Words> wordsIterator = wordsHashSet.iterator();
         while (wordsIterator.hasNext()){
             System.out.println(wordsIterator.next().getWord());
         }
