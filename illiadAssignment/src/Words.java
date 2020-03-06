@@ -2,30 +2,11 @@ public class Words {
     private String word;
 
     public Words(String word) {
-        this.word = word.toLowerCase();
-        if (this.word.contains(",")){
-            this.word = word.replace(",", "");
-        }
-        else if (this.word.contains(".")){
-            this.word = word.replace(".", "");
-        }
-        else if (this.word.contains("?")){
-            this.word = word.replace("?", "");
-        }
-        else if (this.word.contains("!")){
-            this.word = word.replace("!", "");
-        }
-        else if (this.word.contains(":")){
-            this.word = word.replace(":", "");
-        }
-        else if (this.word.contains("\"")){
-            this.word = word.replace("\"", "");
-        }
-        else if (this.word.contains("(")){
-            this.word = word.replace("(", "");
-        }
-        else if (this.word.contains(")")){
-            this.word = word.replace(")", "");
+        for (int i = 0; i < word.length(); i++){
+            if (word.charAt(i) == '.' || word.charAt(i) == ',' || word.charAt(i) == '?' || word.charAt(i) == ':'){
+                this.word = word.replaceAll("[.,?:]+", "").toLowerCase();
+            }
+            this.word = word.toLowerCase();
         }
     }
 
