@@ -10,12 +10,12 @@ public class Main {
         HashSet<Words> wordsHashSet = new HashSet<>();
 
         while (fileScanner.hasNext()) {
-            wordsHashSet.add(new Words(fileScanner.next()));
+            wordsHashSet.add(new Words(fileScanner.nextLine()));
         }
 
         Iterator<Words> wordsIterator = wordsHashSet.iterator();
         while (wordsIterator.hasNext()){
-            System.out.println(wordsIterator.next().getWord());
+            System.out.println(wordsIterator.next());
         }
     }
 }
