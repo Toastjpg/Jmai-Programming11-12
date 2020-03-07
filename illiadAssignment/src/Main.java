@@ -13,9 +13,11 @@ public class Main {
             wordsHashSet.add(new Words(fileScanner.nextLine()));
         }
 
-        Iterator<Words> wordsIterator = wordsHashSet.iterator();
+        WordsComparator wordsComparator = new WordsComparator();
+        
+        /*Iterator<Words> wordsIterator = wordsHashSet.iterator();
         while (wordsIterator.hasNext()){
             System.out.println(wordsIterator.next());
-        }
+        }*/
     }
 }
