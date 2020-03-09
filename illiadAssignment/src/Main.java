@@ -10,14 +10,15 @@ public class Main {
         HashSet<Words> wordsHashSet = new HashSet<>();
 
         while (fileScanner.hasNext()) {
-            wordsHashSet.add(new Words(fileScanner.nextLine()));
+            wordsHashSet.add(new Words(fileScanner.next()));
         }
-
-        WordsComparator wordsComparator = new WordsComparator();
 
         Iterator<Words> wordsIterator = wordsHashSet.iterator();
         while (wordsIterator.hasNext()){
             System.out.println(wordsIterator.next());
         }
+
+        System.out.println("-----------------------------------------------------");
+        System.out.println("Number of Unique Words: " + wordsHashSet.size());
     }
 }
