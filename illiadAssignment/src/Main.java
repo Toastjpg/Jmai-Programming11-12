@@ -14,10 +14,10 @@ public class Main {
         }
 
         WordsComparator wordsComparator = new WordsComparator();
-        
-        /*Iterator<Words> wordsIterator = wordsHashSet.iterator();
+
+        Iterator<Words> wordsIterator = wordsHashSet.iterator();
         while (wordsIterator.hasNext()){
             System.out.println(wordsIterator.next());
-        }*/
+        }
     }
 }
