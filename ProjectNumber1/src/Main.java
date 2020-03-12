@@ -1,3 +1,4 @@
+import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.Arrays;
 
@@ -26,9 +27,64 @@ public class Main {
         }
         return answer;
     }
+//what teh fuck is this shit bruh
+/*    static String problemThree(String s){
+        ArrayList tempString = new ArrayList();
+        ArrayList returnString = new ArrayList();
+        for (int i = 1; i < s.length(); i++){
+            if (s.charAt(i) >= s.charAt(i - 1)){
+                tempString.add(s.charAt(i - 1));
+            }
+            if ((s.charAt(i) < s.charAt(i - 1)) || (i == s.length() - 1 )){
+                tempString.add(s.charAt(i - 1));
 
-    static String problemThree(String s){
-        return s;
+                if(i == s.length() - 1) {
+                    tempString.remove(tempString.size() - 1);
+                    tempString.add(s.charAt(i));
+                }
+                if (tempString.size() >= returnString.size()){
+                    returnString.clear();
+                    returnString.addAll(tempString);
+                    tempString.clear();
+                }
+            }
+        }
+        StringBuilder string = new StringBuilder();
+        for (int k = 0; k < returnString.size(); k++){
+            string.append(returnString.get(k));
+        }
+        return string.toString();
+    }*/
+
+    public static String problemThree(String s){
+        ArrayList tempString = new ArrayList();
+        ArrayList returnString = new ArrayList();
+        for (int i = 1; i < s.length(); i++){
+            if (s.charAt(i) >= s.charAt(i - 1)){
+                tempString.add(s.charAt(i - 1));
+            }
+            else if (s.charAt(i) < s.charAt(i - 1)){
+                tempString.add(s.charAt(i - 1));
+                if (tempString.size() > returnString.size()){
+                    returnString.clear();
+                    returnString.addAll(tempString);
+                }
+                tempString.clear();
+            }
+            if (i == s.length() - 1){
+                tempString.add(s.charAt(i));
+                if (tempString.size() > returnString.size()){
+                    returnString.clear();
+                    returnString.addAll(tempString);
+                }
+                tempString.clear();
+            }
+        }
+        StringBuilder string = new StringBuilder();
+        for (int k = 0; k < returnString.size(); k++){
+            string.append(returnString.get(k));
+        }
+        return string.toString();
     }
 
     public static void main(String[] args) {
@@ -40,7 +96,9 @@ public class Main {
         all possible cases.  If you have 100% success then there is no bugs in your methods.
          */
         String s = "azcbobobegghakl";
-        System.out.println("Problem #1: " + problemOne(s));
-        System.out.println("Problem #2: " + problemTwo(s));
+        System.out.println("Input String: " + s);
+        System.out.println("Number of vowels: " + problemOne(s));
+        System.out.println("Number of times bob occurs is: " + problemTwo(s));
+        System.out.println("Longest substring in alphabetical order is: " + problemThree(s));
     }
 }
