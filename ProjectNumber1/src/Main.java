@@ -1,4 +1,3 @@
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.Arrays;
 
@@ -27,34 +26,6 @@ public class Main {
         }
         return answer;
     }
-//what teh fuck is this shit bruh
-/*    static String problemThree(String s){
-        ArrayList tempString = new ArrayList();
-        ArrayList returnString = new ArrayList();
-        for (int i = 1; i < s.length(); i++){
-            if (s.charAt(i) >= s.charAt(i - 1)){
-                tempString.add(s.charAt(i - 1));
-            }
-            if ((s.charAt(i) < s.charAt(i - 1)) || (i == s.length() - 1 )){
-                tempString.add(s.charAt(i - 1));
-
-                if(i == s.length() - 1) {
-                    tempString.remove(tempString.size() - 1);
-                    tempString.add(s.charAt(i));
-                }
-                if (tempString.size() >= returnString.size()){
-                    returnString.clear();
-                    returnString.addAll(tempString);
-                    tempString.clear();
-                }
-            }
-        }
-        StringBuilder string = new StringBuilder();
-        for (int k = 0; k < returnString.size(); k++){
-            string.append(returnString.get(k));
-        }
-        return string.toString();
-    }*/
 
     public static String problemThree(String s){
         ArrayList tempString = new ArrayList();
