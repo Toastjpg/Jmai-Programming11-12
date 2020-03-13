@@ -28,7 +28,20 @@ public class Main {
     }
 
     static String problemThree(String s){
-        return s;
+        ArrayList tempString = new ArrayList();
+        ArrayList subString = new ArrayList();
+        for (int i = 0; i < s.length() - 1; i++){
+            if (s.charAt(i) > s.charAt(i + 1)){
+                tempString.add(s.charAt(i));
+            }
+            else if (s.charAt(i) < s.charAt(i + 1)){
+                if (tempString.size() > subString.size()){
+
+                }
+
+            }
+        }
+        return subString.toString();
     }
 
     public static void main(String[] args) {
@@ -42,5 +55,6 @@ public class Main {
         String s = "azcbobobegghakl";
         System.out.println("Problem #1: " + problemOne(s));
         System.out.println("Problem #2: " + problemTwo(s));
+        System.out.println("Problem #3: " + problemThree(s));
     }
 }
