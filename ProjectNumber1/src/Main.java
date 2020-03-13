@@ -27,21 +27,35 @@ public class Main {
         return answer;
     }
 
-    static String problemThree(String s){
+    public static String problemThree(String s){
         ArrayList tempString = new ArrayList();
-        ArrayList subString = new ArrayList();
-        for (int i = 0; i < s.length() - 1; i++){
-            if (s.charAt(i) > s.charAt(i + 1)){
-                tempString.add(s.charAt(i));
+        ArrayList returnString = new ArrayList();
+        for (int i = 1; i < s.length(); i++){
+            if (s.charAt(i) >= s.charAt(i - 1)){
+                tempString.add(s.charAt(i - 1));
             }
-            else if (s.charAt(i) < s.charAt(i + 1)){
-                if (tempString.size() > subString.size()){
-
+            else if (s.charAt(i) < s.charAt(i - 1)){
+                tempString.add(s.charAt(i - 1));
+                if (tempString.size() > returnString.size()){
+                    returnString.clear();
+                    returnString.addAll(tempString);
                 }
-
+                tempString.clear();
+            }
+            if (i == s.length() - 1){
+                tempString.add(s.charAt(i));
+                if (tempString.size() > returnString.size()){
+                    returnString.clear();
+                    returnString.addAll(tempString);
+                }
+                tempString.clear();
             }
         }
-        return subString.toString();
+        StringBuilder string = new StringBuilder();
+        for (int k = 0; k < returnString.size(); k++){
+            string.append(returnString.get(k));
+        }
+        return string.toString();
     }
 
     public static void main(String[] args) {
