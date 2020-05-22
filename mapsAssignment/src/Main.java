@@ -4,7 +4,5 @@ public class Main {
         System.out.println(caesarCipher.encrypt());
         CaesarCipher caesarCipher2 = new CaesarCipher("khoor", 3);
         System.out.println(caesarCipher2.decrypt());
-        /*System.out.println(caesarCipher.returncharmap());
-        System.out.println(caesarCipher.returnintmap());*/
     }
 }

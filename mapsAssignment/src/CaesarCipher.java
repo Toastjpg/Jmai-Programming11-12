@@ -5,9 +5,6 @@ public class CaesarCipher {
     private int shift;
     private String encryptedMessage = "";
     private String decryptedMessage = "";
-    /*private String intmapstring = "";
-    private String charmapstring = "";*/
-
 
     private LinkedHashMap<Character, Integer> integerLinkedHashMap = new LinkedHashMap<>();
     private LinkedHashMap<Integer, Character> characterLinkedHashMap = new LinkedHashMap<>();
@@ -22,7 +19,7 @@ public class CaesarCipher {
             integerLinkedHashMap.put(alphabet[i-1], i);
             characterLinkedHashMap.put(i, alphabet[i-1]);
         }
-        //edge case
+        //edge case for z
         integerLinkedHashMap.put('z', 0);
         characterLinkedHashMap.put(0, 'z');
     }
@@ -47,18 +44,4 @@ public class CaesarCipher {
         }
         return decryptedMessage;
     }
-
-    /*public String returnintmap(){
-        for (int i = 0; i < integerLinkedHashMap.size(); i++){
-            intmapstring += integerLinkedHashMap.get(alphabet[i]);
-        }
-        return intmapstring;
-    }
-
-    public String returncharmap(){
-        for (int i = 0; i < characterLinkedHashMap.size(); i++){
-            charmapstring += characterLinkedHashMap.get(i);
-        }
-        return charmapstring;
-    }*/
 }
